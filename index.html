@@ -1,210 +1,244 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ALTAMIM TECHNOLOGY</title><style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+<title>ALTAMIM TECHNOLOGY</title>
 
+<style>
 body {
-  font-family: Arial;
-  background: #020617;
-  color: white;
+margin: 0;
+font-family: Arial;
+background: #020617;
+color: white;
 }
 
 /* Navbar */
 .navbar {
-  display: flex;
-  justify-content: space-between;
-  padding: 20px 60px;
-  background: rgba(0,0,0,0.6);
-  position: sticky;
-  top: 0;
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 20px 40px;
+background: rgba(0,0,0,0.7);
+position: sticky;
+top: 0;
+z-index: 1000;
 }
 
 .navbar h2 {
-  letter-spacing: 2px;
+margin: 0;
 }
 
 .navbar a {
-  color: white;
-  margin-left: 25px;
-  text-decoration: none;
-  font-size: 14px;
+color: white;
+margin-left: 20px;
+text-decoration: none;
+font-size: 14px;
 }
 
 /* Hero */
 .hero {
-  text-align: center;
-  padding: 120px 20px;
-  background: radial-gradient(circle at center, #1e3a8a, #020617);
+text-align: center;
+padding: 120px 20px;
+background: linear-gradient(135deg, #0f172a, #1e3a8a);
 }
 
 .hero img {
-  width: 110px;
-  margin-bottom: 20px;
+width: 90px;
+margin-bottom: 20px;
+filter: drop-shadow(0 0 10px #1e90ff);
 }
 
 .hero h1 {
-  font-size: 48px;
+font-size: 55px;
+margin: 10px 0;
 }
 
 .hero p {
-  margin-top: 10px;
-  color: #ccc;
+color: #ccc;
 }
 
-/* Buttons */
 .btn {
-  margin-top: 25px;
-  padding: 14px 28px;
-  border: none;
-  border-radius: 8px;
-  background: linear-gradient(45deg,#1e90ff,#2563eb);
-  color: white;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.btn:hover {
-  transform: scale(1.05);
+padding: 14px 30px;
+background: linear-gradient(45deg,#1e90ff,#2563eb);
+border: none;
+border-radius: 8px;
+color: white;
+cursor: pointer;
+margin-top: 20px;
 }
 
 /* About */
 .about {
-  text-align: center;
-  padding: 60px 20px;
-  background: #0f172a;
-  font-size: 18px;
+text-align: center;
+padding: 40px;
+background: #0f172a;
+color: #ccc;
 }
 
 /* Services */
 .services {
-  padding: 80px 20px;
-  text-align: center;
+padding: 60px 20px;
+text-align: center;
 }
 
 .cards {
-  display: flex;
-  justify-content: center;
-  gap: 25px;
-  flex-wrap: wrap;
-  margin-top: 40px;
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+gap: 25px;
+margin-top: 30px;
 }
 
 .card {
-  background: rgba(30,144,255,0.1);
-  border: 1px solid rgba(30,144,255,0.3);
-  padding: 25px;
-  border-radius: 12px;
-  width: 260px;
-  transition: 0.3s;
+background: rgba(30,144,255,0.1);
+border: 1px solid rgba(30,144,255,0.3);
+padding: 30px;
+border-radius: 12px;
+width: 260px;
+transition: 0.3s;
 }
 
 .card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 0 20px rgba(30,144,255,0.6);
+transform: translateY(-10px);
+box-shadow: 0 0 25px rgba(30,144,255,0.5);
 }
 
 /* Why */
 .why {
-  display: flex;
-  justify-content: center;
-  gap: 60px;
-  padding: 80px 20px;
-  flex-wrap: wrap;
-}
-
-.why ul {
-  list-style: none;
-}
-
-.why li {
-  margin: 12px 0;
+padding: 50px;
+text-align: center;
 }
 
 /* Contact */
 .contact {
-  text-align: center;
-  padding: 80px 20px;
-  background: #0f172a;
+text-align: center;
+padding: 60px;
+background: #0f172a;
+}
+
+.contact p {
+margin: 8px;
+color: #ccc;
 }
 
 .contact a {
-  color: #1e90ff;
-  text-decoration: none;
+color: #4da6ff;
+text-decoration: none;
+display: block;
+margin-top: 5px;
 }
 
 /* Footer */
 .footer {
-  text-align: center;
-  padding: 20px;
-  background: black;
-  font-size: 14px;
+text-align: center;
+padding: 20px;
+background: black;
 }
-</style></head><body><!-- Navbar --><div class="navbar">
-  <h2>ALTAMIM</h2>
-  <div>
-    <a href="#">Home</a>
-    <a href="#">Services</a>
-    <a href="#">Contact</a>
-  </div>
-</div><!-- Hero --><div class="hero">
-  <img src="logo.png">
-  <h1>ALTAMIM TECHNOLOGY</h1>
-  <p>Reliable IT Infrastructure Solutions</p>
-  <p>Networking • Security • OOB • Servers</p>  <a href="https://wa.me/201070077725">
-    <button class="btn">Contact Us</button>
-  </a>
-</div><!-- About --><div class="about">
-  ALTAMIM TECHNOLOGY delivers enterprise-grade IT infrastructure solutions
-  designed for modern businesses with high performance, reliability, and security.
-</div><!-- Services --><div class="services">
-  <h2>Our Services</h2>  <div class="cards">
-    <div class="card">
-      <h3>Networking</h3>
-      <p>Enterprise-grade networking solutions</p>
-    </div><div class="card">
-  <h3>Cybersecurity</h3>
-  <p>Firewalls, VPN & protection systems</p>
+</style>
+
+</head>
+
+<body>
+
+<!-- Navbar -->
+<div class="navbar">
+<h2>ALTAMIM</h2>
+<div>
+<a href="#">Home</a>
+<a href="#">Services</a>
+<a href="#">Contact</a>
+</div>
+</div>
+
+<!-- Hero -->
+<div class="hero">
+
+<img src="logo.png" alt="ALTAMIM">
+
+<h1>ALTAMIM TECHNOLOGY</h1>
+<p>Enterprise IT Infrastructure Solutions</p>
+<p>Networking • Security • OOB • Servers</p>
+
+<a href="https://wa.me/201070077725" target="_blank">
+<button class="btn">Contact Us</button>
+</a>
+
+</div>
+
+<!-- About -->
+<div class="about">
+<p>
+ALTAMIM TECHNOLOGY delivers enterprise-grade IT infrastructure solutions designed for modern businesses with high performance, reliability, and security.
+</p>
+</div>
+
+<!-- Services -->
+<div class="services">
+<h2>Our Services</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>Networking</h3>
+<p>Enterprise-grade networking solutions</p>
 </div>
 
 <div class="card">
-  <h3>Servers</h3>
-  <p>Deployment & virtualization</p>
+<h3>Cybersecurity</h3>
+<p>Firewalls, VPN & protection systems</p>
 </div>
 
 <div class="card">
-  <h3>OOB</h3>
-  <p>Out-of-band remote management</p>
+<h3>Servers</h3>
+<p>Deployment & virtualization</p>
 </div>
 
-  </div>
-</div><!-- Why --><div class="why">
-  <div>
-    <h2>Why Choose Us</h2>
-    <ul>
-      <li>✔ Professional expertise</li>
-      <li>✔ Reliable solutions</li>
-      <li>✔ Fast response</li>
-      <li>✔ Business-focused</li>
-    </ul>
-  </div>
-</div><!-- Contact --><div class="contact">
-  <h2>Contact Us</h2>  <p><strong>Email:</strong></p>
-  <p>info@altamimtechnology.com</p>
-  <p>sales@altamimtechnology.com</p>
-  <p>support@altamimtechnology.com</p>
-  <p>business@altamimtechnology.com</p>  <br>  <p><strong>Phone:</strong></p>
-  <p>📞 Sales: 01070077725</p>
-  <p>🛠 Technical: 01070077746</p>
-  <p>👔 CEO: 01094194117</p>  <br>  <p><strong>Official Links:</strong></p>  <p>🌐 <a href="https://altamimtechnology2026-arch.github.io/altamim-website/" target="_blank">Official Website</a></p>  <p>💼 <a href="https://www.linkedin.com/in/eng-ahmed-tarek-b496523b2" target="_blank">
-  LinkedIn (Ahmed Tarek - CEO)</a></p>  <p>📘 <a href="https://facebook.com/altamimtechnology" target="_blank">Facebook</a></p>
-  <p>🎵 <a href="https://www.tiktok.com/@altamimtechnology0" target="_blank">TikTok</a></p>
-  <p>▶️ <a href="https://www.youtube.com/@ALTAMIMTECHNOLOGHY" target="_blank">YouTube</a></p></div><!-- Footer --><div class="footer">
-  © 2026 ALTAMIM TECHNOLOGY | All Rights Reserved
-</div></body>
+<div class="card">
+<h3>OOB</h3>
+<p>Out-of-band remote management</p>
+</div>
+
+</div>
+</div>
+
+<!-- Why -->
+<div class="why">
+<h2>Why Choose Us</h2>
+<p>✔ Professional expertise</p>
+<p>✔ Reliable solutions</p>
+<p>✔ Fast response</p>
+<p>✔ Business-focused</p>
+</div>
+
+<!-- Contact -->
+<div class="contact">
+<h2>Contact Us</h2>
+
+<p>info@altamimtechnology.com</p>
+<p>sales@altamimtechnology.com</p>
+<p>support@altamimtechnology.com</p>
+<p>business@altamimtechnology.com</p>
+
+<br>
+
+<p>📞 Sales: 01070077725</p>
+<p>🛠 Technical: 01070077746</p>
+<p>👑 CEO: 01094194117</p>
+
+<br>
+
+<a href="https://www.linkedin.com/in/eng-ahmed-tarek-b496523b2" target="_blank">LinkedIn</a>
+<a href="https://facebook.com/altamimtechnology" target="_blank">Facebook</a>
+<a href="https://www.tiktok.com/@altamimtechnology0" target="_blank">TikTok</a>
+<a href="https://www.youtube.com/@ALTAMIMTECHNOLOGHY" target="_blank">YouTube</a>
+
+</div>
+
+<!-- Footer -->
+<div class="footer">
+<p>© 2026 ALTAMIM TECHNOLOGY</p>
+</div>
+
+</body>
 </html>
