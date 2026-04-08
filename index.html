@@ -1,137 +1,153 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ALTAMIM TECHNOLOGY</title><style>
+<title>ALTAMIM TECHNOLOGY</title>
+
+<style>
 body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #020617;
-  color: white;
+    margin: 0;
+    font-family: Arial;
+    background: #020617;
+    color: white;
 }
 
 /* Navbar */
 .navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 40px;
-  background: rgba(0,0,0,0.7);
-}
-
-.logo-nav {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.logo-nav img {
-  width: 45px;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 40px;
+    background: rgba(0,0,0,0.8);
 }
 
 .navbar a {
-  color: white;
-  margin-left: 20px;
-  text-decoration: none;
+    color: white;
+    margin-left: 20px;
+    text-decoration: none;
 }
 
 /* Hero */
 .hero {
-  text-align: center;
-  padding: 120px 20px;
-  background: linear-gradient(135deg,#0f172a,#1e3a8a);
+    text-align: center;
+    padding: 100px 20px;
+    background: linear-gradient(135deg,#0f172a,#1e3a8a);
 }
 
 .hero img {
-  width: 120px;
-  margin-bottom: 20px;
+    width: 120px;
+    margin-bottom: 20px;
 }
 
 .hero h1 {
-  font-size: 50px;
-  margin: 10px 0;
-}
-
-.hero p {
-  color: #ccc;
+    font-size: 40px;
 }
 
 .btn {
-  margin-top: 20px;
-  padding: 12px 30px;
-  background: #2563eb;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
+    margin-top: 20px;
+    padding: 12px 25px;
+    background: #0ea5e9;
+    border: none;
+    color: white;
+    cursor: pointer;
 }
 
 /* Services */
 .services {
-  padding: 60px 20px;
-  text-align: center;
+    text-align: center;
+    padding: 60px 20px;
 }
 
 .cards {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 25px;
-  margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .card {
-  background: #0f172a;
-  padding: 25px;
-  border-radius: 12px;
-  width: 250px;
+    background: #0f172a;
+    margin: 15px;
+    padding: 20px;
+    width: 220px;
+    border-radius: 10px;
 }
 
-/* Footer */
-.footer {
-  text-align: center;
-  padding: 20px;
-  background: black;
+/* Contact */
+.contact {
+    text-align: center;
+    padding: 50px;
+    background: #020617;
 }
-</style></head><body><!-- Navbar --><div class="navbar">
-  <div class="logo-nav">
-    <img src="IMG-20260404-WA0006.jpg" alt="logo">
-    <h2>ALTAMIM</h2>
-  </div>
-  <div>
-    <a href="#">Home</a>
-    <a href="#">Services</a>
-    <a href="#">Contact</a>
-  </div>
-</div><!-- Hero --><div class="hero">
-  <img src="IMG-20260404-WA0006.jpg" alt="logo">
-  <h1>ALTAMIM TECHNOLOGY</h1>
-  <p>Enterprise IT Infrastructure & Data Center Solutions</p>
-  <p>Networking • Cybersecurity • Servers • OOB Management</p>  <a href="https://wa.me/201070077725" target="_blank">
-    <button class="btn">Contact Us</button>
-  </a>
-</div><!-- Services --><div class="services">
-  <h2>Our Services</h2>  <div class="cards">
-    <div class="card">
-      <h3>Networking</h3>
-      <p>Enterprise network design & implementation</p>
-    </div><div class="card">
-  <h3>Cybersecurity</h3>
-  <p>Firewall, VPN & advanced protection</p>
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: black;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="navbar">
+    <div>ALTAMIM</div>
+    <div>
+        <a href="#">Home</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+    </div>
 </div>
 
-<div class="card">
-  <h3>Servers</h3>
-  <p>Deployment & virtualization solutions</p>
+<div class="hero">
+    <img src="IMG-20260404-WA0006.jpg">
+    <h1>ALTAMIM TECHNOLOGY</h1>
+    <p>Enterprise IT Infrastructure & Data Center Solutions</p>
+    <p>Networking • Cybersecurity • Servers • OOB</p>
+    <button class="btn" onclick="window.open('https://wa.me/201070077725')">Contact Us</button>
 </div>
 
-<div class="card">
-  <h3>OOB</h3>
-  <p>Remote management solutions</p>
+<div class="services">
+    <h2>Our Services</h2>
+
+    <div class="cards">
+        <div class="card">
+            <h3>Networking</h3>
+            <p>Enterprise network solutions</p>
+        </div>
+
+        <div class="card">
+            <h3>Cybersecurity</h3>
+            <p>Firewalls & protection</p>
+        </div>
+
+        <div class="card">
+            <h3>Servers</h3>
+            <p>Deployment & virtualization</p>
+        </div>
+
+        <div class="card">
+            <h3>OOB</h3>
+            <p>Remote management</p>
+        </div>
+    </div>
 </div>
 
-  </div>
-</div><!-- Footer --><div class="footer">
-  <p>© 2026 ALTAMIM TECHNOLOGY</p>
-</div></body>
+<div class="contact">
+    <h2>Contact Us</h2>
+
+    <p>info@altamimtechnology.com</p>
+    <p>sales@altamimtechnology.com</p>
+    <p>support@altamimtechnology.com</p>
+
+    <p>Sales: 01070077725</p>
+    <p>Technical: 01070077746</p>
+    <p>CEO: 01094194117</p>
+</div>
+
+<footer>
+© 2026 ALTAMIM TECHNOLOGY
+</footer>
+
+</body>
 </html>
