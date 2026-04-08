@@ -1,202 +1,495 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ALTAMIM TECHNOLOGY</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALTAMIM TECHNOLOGY | Enterprise IT Solutions</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Orbitron:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-blue: #0ea5e9;
+            --deep-blue: #0f172a;
+            --darkest-blue: #020617;
+            --accent-glow: rgba(14, 165, 233, 0.4);
+            --text-light: #f1f5f9;
+            --text-dim: #94a3b8;
+            --glass: rgba(15, 23, 42, 0.8);
+            --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
 
-<style>
-body {
-    margin: 0;
-    font-family: Arial;
-    background: #020617;
-    color: white;
-}
+        /* --- Global Resets --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
 
-/* Navbar */
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px 40px;
-    background: rgba(0,0,0,0.9);
-}
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--darkest-blue);
+            color: var(--text-light);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
 
-.navbar a {
-    color: white;
-    margin-left: 20px;
-    text-decoration: none;
-}
+        /* --- Custom CSS Logo --- */
+        .tech-logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+        }
 
-/* Hero */
-.hero {
-    position: relative;
-    text-align: center;
-    padding: 120px 20px;
-    background: url('https://images.unsplash.com/photo-1558494949-ef010cbdcc31') center/cover no-repeat;
-}
+        .shield-icon {
+            width: 40px;
+            height: 45px;
+            background: linear-gradient(135deg, var(--primary-blue), #0369a1);
+            position: relative;
+            clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 0 20px var(--accent-glow);
+        }
 
-.overlay {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background: rgba(2,6,23,0.9);
-}
+        .shield-icon::after {
+            content: 'T';
+            color: white;
+            font-family: 'Orbitron', sans-serif;
+            font-weight: 800;
+            font-size: 22px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
 
-.logo-img {
-    position: relative;
-    width: 180px;
-    margin-bottom: 20px;
-    filter: drop-shadow(0 0 25px #38bdf8);
-}
+        .logo-text {
+            font-family: 'Orbitron', sans-serif;
+            font-weight: 700;
+            font-size: 1.2rem;
+            letter-spacing: 1px;
+            color: white;
+            text-transform: uppercase;
+        }
 
-.hero h1 {
-    position: relative;
-    font-size: 42px;
-}
+        /* --- Navbar --- */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 1rem 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: var(--glass);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+            z-index: 1000;
+        }
 
-.sub {
-    position: relative;
-    color: #ccc;
-}
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
 
-.services-text {
-    position: relative;
-    color: #38bdf8;
-    margin-bottom: 20px;
-}
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-dim);
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: var(--transition);
+        }
 
-.btn {
-    position: relative;
-    padding: 12px 30px;
-    background: #38bdf8;
-    border: none;
-    color: black;
-    font-weight: bold;
-    cursor: pointer;
-}
+        .nav-links a:hover {
+            color: var(--primary-blue);
+            text-shadow: 0 0 10px var(--accent-glow);
+        }
 
-/* Services */
-.services {
-    text-align: center;
-    padding: 60px 20px;
-}
+        /* --- Hero Section --- */
+        .hero {
+            position: relative;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 20px;
+            background: radial-gradient(circle at center, #1e293b 0%, #020617 100%);
+            overflow: hidden;
+        }
 
-.cards {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
+        /* Background Network Pattern Effect */
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background-image: radial-gradient(var(--primary-blue) 0.5px, transparent 0.5px);
+            background-size: 40px 40px;
+            opacity: 0.1;
+        }
 
-.card {
-    background: #0f172a;
-    margin: 15px;
-    padding: 25px;
-    width: 230px;
-    border-radius: 12px;
-    transition: 0.3s;
-}
+        .hero .shield-icon {
+            width: 80px;
+            height: 95px;
+            margin-bottom: 25px;
+            transform: scale(1.5);
+        }
 
-.card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 0 20px #38bdf8;
-}
+        .hero h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            font-weight: 800;
+            margin-bottom: 10px;
+            background: linear-gradient(to bottom, #fff 40%, var(--primary-blue));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            filter: drop-shadow(0 0 15px var(--accent-glow));
+        }
 
-/* Contact */
-.contact {
-    text-align: center;
-    padding: 60px;
-}
+        .hero .subtitle {
+            font-size: clamp(1rem, 2vw, 1.4rem);
+            color: var(--text-dim);
+            margin-bottom: 15px;
+            font-weight: 300;
+        }
 
-/* Footer */
-footer {
-    text-align: center;
-    padding: 20px;
-    background: black;
-}
-</style>
+        .hero .services-line {
+            color: var(--primary-blue);
+            font-weight: 600;
+            letter-spacing: 2px;
+            margin-bottom: 40px;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+        }
 
+        .btn-cta {
+            padding: 16px 40px;
+            background: linear-gradient(135deg, var(--primary-blue), #0369a1);
+            color: white;
+            text-decoration: none;
+            font-weight: 700;
+            border-radius: 4px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 10px 25px -10px var(--primary-blue);
+            transition: var(--transition);
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .btn-cta:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 35px -10px var(--primary-blue);
+            filter: brightness(1.1);
+        }
+
+        /* --- Section Styling --- */
+        section {
+            padding: 120px 10%;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-header h2 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-header h2::after {
+            content: '';
+            display: block;
+            width: 50%;
+            height: 4px;
+            background: var(--primary-blue);
+            margin: 10px auto;
+            border-radius: 2px;
+        }
+
+        /* --- About Section --- */
+        .about {
+            background: var(--deep-blue);
+            text-align: center;
+        }
+
+        .about p {
+            max-width: 900px;
+            margin: 0 auto;
+            font-size: 1.2rem;
+            color: var(--text-dim);
+            line-height: 1.8;
+        }
+
+        /* --- Services Grid --- */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(255,255,255,0.05);
+            padding: 40px;
+            border-radius: 12px;
+            text-align: center;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card:hover {
+            background: rgba(255,255,255,0.07);
+            border-color: var(--primary-blue);
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px -20px rgba(0,0,0,0.5);
+        }
+
+        .service-card .icon-box {
+            width: 60px;
+            height: 60px;
+            margin: 0 auto 20px;
+            background: rgba(14, 165, 233, 0.1);
+            border-radius: 8px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: var(--primary-blue);
+            font-size: 24px;
+        }
+
+        .service-card h3 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+        }
+
+        /* --- Why Choose Us --- */
+        .why-us-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 20px;
+        }
+
+        .why-item {
+            padding: 30px;
+            border-left: 3px solid var(--primary-blue);
+            background: linear-gradient(to right, rgba(14, 165, 233, 0.05), transparent);
+        }
+
+        .why-item h4 {
+            font-family: 'Orbitron', sans-serif;
+            margin-bottom: 10px;
+            color: var(--primary-blue);
+        }
+
+        /* --- Contact Section --- */
+        .contact {
+            background: var(--deep-blue);
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: start;
+        }
+
+        .contact-info-block h3 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.8rem;
+            margin-bottom: 30px;
+        }
+
+        .contact-method {
+            margin-bottom: 25px;
+        }
+
+        .contact-method h5 {
+            color: var(--primary-blue);
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            margin-bottom: 5px;
+            letter-spacing: 1px;
+        }
+
+        .contact-method p, .contact-method a {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            text-decoration: none;
+            display: block;
+            transition: var(--transition);
+        }
+
+        .contact-method a:hover {
+            color: var(--primary-blue);
+            padding-left: 5px;
+        }
+
+        .whatsapp-footer {
+            display: inline-block;
+            margin-top: 20px;
+            color: #25d366;
+            font-weight: 700;
+            text-decoration: none;
+            border: 1px solid #25d366;
+            padding: 10px 20px;
+            border-radius: 4px;
+            transition: var(--transition);
+        }
+
+        .whatsapp-footer:hover {
+            background: #25d366;
+            color: white;
+        }
+
+        /* --- Footer --- */
+        footer {
+            padding: 40px 10%;
+            text-align: center;
+            background: var(--darkest-blue);
+            border-top: 1px solid rgba(255,255,255,0.05);
+            color: var(--text-dim);
+            font-size: 0.9rem;
+        }
+
+        /* --- Mobile Responsiveness --- */
+        @media (max-width: 768px) {
+            nav { padding: 1rem 5%; }
+            .nav-links { display: none; } /* Simplified for pure HTML/CSS */
+            .contact { grid-template-columns: 1fr; }
+            section { padding: 80px 5%; }
+            .hero h1 { font-size: 2.5rem; }
+        }
+    </style>
 </head>
-
 <body>
 
-<!-- Navbar -->
-<div class="navbar">
-    <div>ALTAMIM</div>
-    <div>
-        <a href="#">Home</a>
-        <a href="#">Services</a>
-        <a href="#">Contact</a>
-    </div>
-</div>
+    <nav>
+        <a href="#" class="tech-logo">
+            <div class="shield-icon"></div>
+            <span class="logo-text">ALTAMIM</span>
+        </a>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
 
-<!-- Hero -->
-<div class="hero">
-    <div class="overlay"></div>
+    <section class="hero" id="home">
+        <div class="shield-icon"></div>
+        <h1>ALTAMIM TECHNOLOGY</h1>
+        <p class="subtitle">Enterprise IT Infrastructure & Data Center Solutions</p>
+        <p class="services-line">Networking • Cybersecurity • Servers • OOB Management</p>
+        <a href="https://wa.me/201070077725" class="btn-cta">Contact Us Now</a>
+    </section>
 
-    <img src="logo.png" class="logo-img">
+    <section class="about" id="about">
+        <div class="section-header">
+            <h2>Our Identity</h2>
+        </div>
+        <p>
+            ALTAMIM TECHNOLOGY delivers reliable IT infrastructure solutions including networking, 
+            cybersecurity, and server environments tailored for modern businesses. 
+            We specialize in bridging the gap between complex hardware demands and seamless enterprise operations.
+        </p>
+    </section>
 
-    <h1>ALTAMIM TECHNOLOGY</h1>
+    <section class="services" id="services">
+        <div class="section-header">
+            <h2>Core Solutions</h2>
+        </div>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="icon-box">📡</div>
+                <h3>Networking</h3>
+                <p>High-performance routing, switching, and wireless architectures for seamless connectivity.</p>
+            </div>
+            <div class="service-card">
+                <div class="icon-box">🛡️</div>
+                <h3>Cybersecurity</h3>
+                <p>Next-gen firewalls, threat detection, and zero-trust security frameworks.</p>
+            </div>
+            <div class="service-card">
+                <div class="icon-box">🖥️</div>
+                <h3>Servers</h3>
+                <p>Scalable server deployments and virtualization for mission-critical applications.</p>
+            </div>
+            <div class="service-card">
+                <div class="icon-box">🕹️</div>
+                <h3>OOB Management</h3>
+                <p>Remote infrastructure control via Out-of-Band management for total reliability.</p>
+            </div>
+        </div>
+    </section>
 
-    <p class="sub">Reliable IT Infrastructure Solutions</p>
+    <section class="why-us">
+        <div class="section-header">
+            <h2>Why ALTAMIM</h2>
+        </div>
+        <div class="why-us-grid">
+            <div class="why-item">
+                <h4>Technical Expertise</h4>
+                <p>Certified engineers with deep knowledge in enterprise-grade technologies.</p>
+            </div>
+            <div class="why-item">
+                <h4>Reliable & Secure</h4>
+                <p>Every solution is built with a security-first mindset to protect your assets.</p>
+            </div>
+            <div class="why-item">
+                <h4>Rapid Support</h4>
+                <p>Fast response times and dedicated technical support for zero downtime.</p>
+            </div>
+            <div class="why-item">
+                <h4>Business Focus</h4>
+                <p>We align our IT solutions with your specific commercial goals and growth.</p>
+            </div>
+        </div>
+    </section>
 
-    <p class="services-text">
-        Networking • Cybersecurity • Servers • OOB Management
-    </p>
+    <section class="contact" id="contact">
+        <div class="contact-info-block">
+            <h3>Connect with Experts</h3>
+            
+            <div class="contact-method">
+                <h5>Email Inquiry</h5>
+                <a href="mailto:info@altamimtechnology.com">info@altamimtechnology.com</a>
+                <a href="mailto:sales@altamimtechnology.com">sales@altamimtechnology.com</a>
+            </div>
 
-    <button class="btn" onclick="window.open('https://wa.me/201070077725')">
-        Contact Us
-    </button>
-</div>
-
-<!-- Services -->
-<div class="services">
-    <h2>Our Services</h2>
-
-    <div class="cards">
-        <div class="card">
-            <h3>Networking</h3>
-            <p>Enterprise network solutions</p>
+            <div class="contact-method">
+                <h5>Technical Support</h5>
+                <a href="mailto:support@altamimtechnology.com">support@altamimtechnology.com</a>
+                <a href="mailto:business@altamimtechnology.com">business@altamimtechnology.com</a>
+            </div>
         </div>
 
-        <div class="card">
-            <h3>Cybersecurity</h3>
-            <p>Firewalls & protection</p>
+        <div class="contact-info-block">
+            <h3>Direct Reach</h3>
+            
+            <div class="contact-method">
+                <h5>Phone Lines</h5>
+                <p>Sales: 01070077725</p>
+                <p>Technical: 01070077746</p>
+                <p>CEO: 01094194117</p>
+            </div>
+
+            <a href="https://wa.me/201070077725" class="whatsapp-footer">
+                Message on WhatsApp →
+            </a>
         </div>
+    </section>
 
-        <div class="card">
-            <h3>Servers</h3>
-            <p>Deployment & virtualization</p>
-        </div>
-
-        <div class="card">
-            <h3>OOB</h3>
-            <p>Remote management</p>
-        </div>
-    </div>
-</div>
-
-<!-- Contact -->
-<div class="contact">
-    <h2>Contact Us</h2>
-
-    <p>info@altamimtechnology.com</p>
-    <p>sales@altamimtechnology.com</p>
-    <p>support@altamimtechnology.com</p>
-    <p>business@altamimtechnology.com</p>
-
-    <br>
-
-    <p>📞 Sales: 01070077725</p>
-    <p>🛠 Technical: 01070077746</p>
-    <p>👑 CEO: 01094194117</p>
-</div>
-
-<!-- Footer -->
-<footer>
-© 2026 ALTAMIM TECHNOLOGY
-</footer>
+    <footer>
+        <p>&copy; 2026 ALTAMIM TECHNOLOGY. All Rights Reserved. | Secure Enterprise Solutions</p>
+    </footer>
 
 </body>
 </html>
+ 
