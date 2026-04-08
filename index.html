@@ -18,7 +18,7 @@ body {
     display: flex;
     justify-content: space-between;
     padding: 20px 40px;
-    background: rgba(0,0,0,0.8);
+    background: rgba(0,0,0,0.9);
 }
 
 .navbar a {
@@ -29,26 +29,51 @@ body {
 
 /* Hero */
 .hero {
+    position: relative;
     text-align: center;
-    padding: 100px 20px;
-    background: linear-gradient(135deg,#0f172a,#1e3a8a);
+    padding: 120px 20px;
+    background: url('https://images.unsplash.com/photo-1558494949-ef010cbdcc31') center/cover no-repeat;
 }
 
-.hero img {
-    width: 120px;
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(2,6,23,0.9);
+}
+
+.logo-img {
+    position: relative;
+    width: 180px;
     margin-bottom: 20px;
+    filter: drop-shadow(0 0 25px #38bdf8);
 }
 
 .hero h1 {
-    font-size: 40px;
+    position: relative;
+    font-size: 42px;
+}
+
+.sub {
+    position: relative;
+    color: #ccc;
+}
+
+.services-text {
+    position: relative;
+    color: #38bdf8;
+    margin-bottom: 20px;
 }
 
 .btn {
-    margin-top: 20px;
-    padding: 12px 25px;
-    background: #0ea5e9;
+    position: relative;
+    padding: 12px 30px;
+    background: #38bdf8;
     border: none;
-    color: white;
+    color: black;
+    font-weight: bold;
     cursor: pointer;
 }
 
@@ -67,18 +92,24 @@ body {
 .card {
     background: #0f172a;
     margin: 15px;
-    padding: 20px;
-    width: 220px;
-    border-radius: 10px;
+    padding: 25px;
+    width: 230px;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 20px #38bdf8;
 }
 
 /* Contact */
 .contact {
     text-align: center;
-    padding: 50px;
-    background: #020617;
+    padding: 60px;
 }
 
+/* Footer */
 footer {
     text-align: center;
     padding: 20px;
@@ -90,6 +121,7 @@ footer {
 
 <body>
 
+<!-- Navbar -->
 <div class="navbar">
     <div>ALTAMIM</div>
     <div>
@@ -99,14 +131,26 @@ footer {
     </div>
 </div>
 
+<!-- Hero -->
 <div class="hero">
-    <img src="IMG-20260404-WA0006.jpg">
+    <div class="overlay"></div>
+
+    <img src="logo.png" class="logo-img">
+
     <h1>ALTAMIM TECHNOLOGY</h1>
-    <p>Enterprise IT Infrastructure & Data Center Solutions</p>
-    <p>Networking • Cybersecurity • Servers • OOB</p>
-    <button class="btn" onclick="window.open('https://wa.me/201070077725')">Contact Us</button>
+
+    <p class="sub">Reliable IT Infrastructure Solutions</p>
+
+    <p class="services-text">
+        Networking • Cybersecurity • Servers • OOB Management
+    </p>
+
+    <button class="btn" onclick="window.open('https://wa.me/201070077725')">
+        Contact Us
+    </button>
 </div>
 
+<!-- Services -->
 <div class="services">
     <h2>Our Services</h2>
 
@@ -133,18 +177,23 @@ footer {
     </div>
 </div>
 
+<!-- Contact -->
 <div class="contact">
     <h2>Contact Us</h2>
 
     <p>info@altamimtechnology.com</p>
     <p>sales@altamimtechnology.com</p>
     <p>support@altamimtechnology.com</p>
+    <p>business@altamimtechnology.com</p>
 
-    <p>Sales: 01070077725</p>
-    <p>Technical: 01070077746</p>
-    <p>CEO: 01094194117</p>
+    <br>
+
+    <p>📞 Sales: 01070077725</p>
+    <p>🛠 Technical: 01070077746</p>
+    <p>👑 CEO: 01094194117</p>
 </div>
 
+<!-- Footer -->
 <footer>
 © 2026 ALTAMIM TECHNOLOGY
 </footer>
